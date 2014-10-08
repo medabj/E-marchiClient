@@ -1,5 +1,7 @@
 package com.esprit.macchiato.emarchi.client;
 
+import java.util.Collection;
+
 import javax.naming.NamingException;
 
 import com.esprit.macchiato.emarchi.delegate.ClientCrudDelegate;
@@ -16,9 +18,11 @@ public static void main(String[] args) throws Exception {
 		Client p1=new Client();
 		//p1.setFirstName("amine");
 		//ClientCrudDelegate.addPerson(p1);
-		//ClientCrudDelegate.findAllclient();
-	
-		ClientCrudDelegate.delete(1);
+		Collection<Client> clients=ClientCrudDelegate.findAllclient();
+		for(Client c:clients){
+			System.out.println(c);
+		}
+		//ClientCrudDelegate.delete(1);
 
 	}
 

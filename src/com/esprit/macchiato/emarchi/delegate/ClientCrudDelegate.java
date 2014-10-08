@@ -1,5 +1,6 @@
 package com.esprit.macchiato.emarchi.delegate;
 
+import java.util.Collection;
 import java.util.List;
 
 import javax.management.Query;
@@ -31,7 +32,7 @@ public class ClientCrudDelegate {
 		getRemoteEJB().delete(id);
 	}
 	
-	public static  List<Client> findAllclient() {
+	public static  Collection<Client> findAllclient() {
 		return getRemoteEJB().findAllclient();
 	}
 

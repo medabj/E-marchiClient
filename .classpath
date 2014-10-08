@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src" />
-	<classpathentry kind="con"
-		path="org.eclipse.jdt.launching.JRE_CONTAINER" />
-	<classpathentry kind="lib"
-		path="D:/BI2_JEE/eclipse/RunTime/jboss-as-7.1.1.Final/bin/client/jboss-client.jar" />
-	<classpathentry combineaccessrules="false" kind="src"
-		path="/e-marchiEJB" />
-	<classpathentry kind="output" path="bin" />
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/BI2_JEE/eclipse/RunTime/jboss-as-7.1.1.Final/bin/client/jboss-client.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/e-marchiEJB"/>
+	<classpathentry kind="lib" path="D:/BI2_JEE/eclipse/RunTime/jboss-as-7.1.1.Final/modules/org/hibernate/main/hibernate-core-4.0.1.Final.jar"/>
+	<classpathentry kind="output" path="bin"/>
 </classpath>
