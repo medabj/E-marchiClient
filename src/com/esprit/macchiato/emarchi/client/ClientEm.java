@@ -14,10 +14,11 @@ public static void main(String[] args) throws Exception {
 		
 		
 		Client p1=new Client();
-		p1.setFirstName("ferdawes");
-		ClientCrudDelegate.addPerson(p1);
-		//AdminCrudDelegate.findAllclient();
-		//AdminCrudDelegate.delete(p);
+		//p1.setFirstName("amine");
+		//ClientCrudDelegate.addPerson(p1);
+		//ClientCrudDelegate.findAllclient();
+	
+		ClientCrudDelegate.delete(1);
 
 	}
 

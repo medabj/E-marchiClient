@@ -27,8 +27,8 @@ public class ClientCrudDelegate {
 	}
 
 	
-	public static void delete(Client p) {
-		getRemoteEJB().delete(p);
+	public static void delete(int id) {
+		getRemoteEJB().delete(id);
 	}
 	
 	public static  List<Client> findAllclient() {
