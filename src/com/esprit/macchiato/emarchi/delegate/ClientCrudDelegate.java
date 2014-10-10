@@ -15,7 +15,7 @@ public class ClientCrudDelegate {
 
 	private static ClientCrudEJBRemote getRemoteEJB() {
 		PersonCrud = (ClientCrudEJBRemote) ServiceLocator.getInstance()
-				.getProxy("/e-marchiEJB/ClientCrudEJB!com.esprit.macchiato.emarchi.service.ClientCrudEJBRemote");
+				.getProxy("E-marchi-master/ClientCrudEJB!com.esprit.macchiato.emarchi.service.ClientCrudEJBRemote");
 		return PersonCrud;
 	}
 
@@ -28,7 +28,7 @@ public class ClientCrudDelegate {
 	}
 
 	
-	public static void delete(int id) {
+	public static void delete(int id) throws Exception {
 		getRemoteEJB().delete(id);
 	}
 	
