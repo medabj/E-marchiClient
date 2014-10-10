@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.JTextField;
 
 public class ListClient {
 
@@ -53,42 +54,15 @@ public class ListClient {
 		frmClient.setTitle("Client");
 		frmClient.setBounds(100, 100, 637, 464);
 		frmClient.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
-		JPanel panel = new JPanel();
 		GroupLayout groupLayout = new GroupLayout(frmClient.getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addComponent(panel, GroupLayout.PREFERRED_SIZE, 621, GroupLayout.PREFERRED_SIZE)
+				.addGap(0, 621, Short.MAX_VALUE)
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addComponent(panel, GroupLayout.PREFERRED_SIZE, 425, GroupLayout.PREFERRED_SIZE)
+				.addGap(0, 425, Short.MAX_VALUE)
 		);
-		panel.setLayout(new GridLayout(1, 0, 0, 0));
-		
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		panel.add(tabbedPane);
-		
-		JTabbedPane tabbedPane_1 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.addTab("Accounts Management", null, tabbedPane_1, null);
-		
-		JLabel lblNewLabel = new JLabel("                                List Of Client");
-		tabbedPane_1.addTab("New tab", null, lblNewLabel, null);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 23));
-		lblNewLabel.setForeground(new Color(95, 158, 160));
-		lblNewLabel.setVerticalAlignment(SwingConstants.TOP);
-		
-		JTabbedPane tabbedPane_2 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.addTab("Offers Management", null, tabbedPane_2, null);
-		
-		JTabbedPane tabbedPane_3 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.addTab("Categories Management", null, tabbedPane_3, null);
-		
-		JTabbedPane tabbedPane_4 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.addTab("Verification of Registration", null, tabbedPane_4, null);
-		
-		JTabbedPane tabbedPane_5 = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.addTab("Sign", null, tabbedPane_5, null);
 		frmClient.getContentPane().setLayout(groupLayout);
 	}
 }
