@@ -13,7 +13,7 @@ public static void main(String[] args) throws Exception {
 		
 		
 		Client p1=new Client();
-		p1.setFirstName("ferdawes");
+		p1.setFirstName("hamza");
 		ClientCrudDelegate.addPerson(p1);
 		Collection<Client> clients=ClientCrudDelegate.findAllclient();
 		for(Client c:clients){
