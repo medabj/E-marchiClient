@@ -1,6 +1,7 @@
 package com.esprit.macchiato.emarchi.delegate;
 
 import java.util.Collection;
+import java.util.List;
 
 import com.esprit.macchiato.emarchi.domain.Products;
 import com.esprit.macchiato.emarchi.locator.ServiceLocator;
@@ -21,7 +22,7 @@ public class OffersCrudDelegate {
 		return getRemoteEJB().findOfferById(id);
 	}
 
-	public static Collection<Products> findAllOffers() {
+	public static List<Products> findAllOffers() {
 		return getRemoteEJB().findAllOffers();
 	}
 	
