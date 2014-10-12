@@ -3,6 +3,7 @@ package com.esprit.macchiato.emarchi.delegate;
 import java.util.List;
 
 import com.esprit.macchiato.emarchi.domain.Categories;
+
 import com.esprit.macchiato.emarchi.locator.ServiceLocator;
 import com.esprit.macchiato.emarchi.service.CategorieCrudEJBRemote;
 
@@ -18,4 +19,11 @@ public class CategoriesCrudDelegate {
 	public static List<Categories> findAllCategories() {
 		return getRemoteEJB().findAllCategories();
 	}
+	
+	public static void addCategorie(Categories p) throws Exception {
+		getRemoteEJB().addCategorie(p);
+	}
+	
+	
+	
 }
