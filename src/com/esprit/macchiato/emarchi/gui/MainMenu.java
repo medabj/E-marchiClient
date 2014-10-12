@@ -56,6 +56,7 @@ public class MainMenu extends JFrame {
 	public List<Products> ProdList;
 	private JTable Offerstable;
 	private List<Categories> CatList;
+	private List<Client> ClienList;
 	JComboBox CatComboBox = new JComboBox();
 	//---------------------------------------------------------------------------------------------------------------------------------------
 	/**
@@ -88,7 +89,7 @@ public class MainMenu extends JFrame {
 		}
 		//----------------------------------------
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 700, 500);
+		setBounds(100, 100, 715, 500);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(0, 153, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -124,6 +125,26 @@ public class MainMenu extends JFrame {
 		JPanel panel_1 = new JPanel();
 		tabbedPane.addTab("Offers", null, panel_1, null);
 		
+		JPanel panel_3= new JPanel();
+		tabbedPane.addTab("Accounts", null, panel_3, null);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		GroupLayout gl_panel_3 = new GroupLayout(panel_3);
+		gl_panel_3.setHorizontalGroup(
+			gl_panel_3.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_3.createSequentialGroup()
+					.addGap(25)
+					.addComponent(scrollPane_1, GroupLayout.PREFERRED_SIZE, 610, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(36, Short.MAX_VALUE))
+		);
+		gl_panel_3.setVerticalGroup(
+			gl_panel_3.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_panel_3.createSequentialGroup()
+					.addGap(35)
+					.addComponent(scrollPane_1, GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+					.addGap(48))
+		);
+		panel_3.setLayout(gl_panel_3);
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.addMouseListener(new MouseAdapter() {
 		//----------------------------------------------------------------------------------------------------------------	
@@ -212,17 +233,11 @@ public class MainMenu extends JFrame {
 		Offerstable = new JTable();
 		scrollPane.setViewportView(Offerstable);
 		panel_1.setLayout(gl_panel_1);
-		contentPane.setLayout(gl_contentPane);
 		initDataBindings();
+		
 	}
 	protected void initDataBindings() {
-		
-		
-		//------------------------------------------------------------------------------------------------------------------------------------------------------------
-		// Jtable des offres  
-		
 		JTableBinding<Products, List<Products>, JTable> jTableBinding = SwingBindings.createJTableBinding(UpdateStrategy.READ, ProdList, Offerstable);
-
 		//
 		BeanProperty<Products, Integer> photoBeanProperty = BeanProperty.create("IDProduct");
 		jTableBinding.addColumnBinding(photoBeanProperty).setColumnName("ID Offer");
@@ -245,11 +260,27 @@ public class MainMenu extends JFrame {
 		BeanProperty<Products, Client> photoBeanProperty_6 = BeanProperty.create("owner.IDClient");
 		jTableBinding.addColumnBinding(photoBeanProperty_6).setColumnName("Owner");
 		//
-		
-		jTableBinding.bind();
-		//--------------------------------------------------------------------------------------------------------------------------------------------------------------
-		
+//		BeanProperty<Client, Integer> photoBeanProperty = BeanProperty.create("IDProduct");
+//		jTableBinding.addColumnBinding(photoBeanProperty);
+//		//
+//		BeanProperty<Products, String> photoBeanProperty_1 = BeanProperty.create("nameProduct");
+//		jTableBinding.addColumnBinding(photoBeanProperty_1).setColumnName("Product Name");
+//		//
+//		BeanProperty<Products, String> photoBeanProperty_2 = BeanProperty.create("Description");
+//		jTableBinding.addColumnBinding(photoBeanProperty_2).setColumnName("Offer Description");
+//		//
+//		BeanProperty<Products, String> photoBeanProperty_3 = BeanProperty.create("categorie.Description");
+//		jTableBinding.addColumnBinding(photoBeanProperty_3).setColumnName("Category");
+//		//
+//		BeanProperty<Products, Float> photoBeanProperty_4 = BeanProperty.create("Price");
+//		jTableBinding.addColumnBinding(photoBeanProperty_4).setColumnName("Price");
+//		//
+//		BeanProperty<Products, Date> photoBeanProperty_5 = BeanProperty.create("depotDate");
+//		jTableBinding.addColumnBinding(photoBeanProperty_5).setColumnName("Add Date");
+//		//
+//		BeanProperty<Products, Client> photoBeanProperty_6 = BeanProperty.create("owner.IDClient");
+//		jTableBinding.addColumnBinding(photoBeanProperty_6).setColumnName("Owner");
+//		//
+//		jTableBinding.bind();
 	}
-	
-	
 }
