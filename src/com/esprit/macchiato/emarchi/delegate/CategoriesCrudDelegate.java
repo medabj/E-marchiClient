@@ -24,6 +24,16 @@ public class CategoriesCrudDelegate {
 		getRemoteEJB().addCategorie(p);
 	}
 	
+	public static void delete(int id) throws Exception {
+		getRemoteEJB().delete(id);
+	}
 	
+	public static void updateCategory(Categories p){
+		getRemoteEJB().update(p);
+	}
+	
+	public static Categories findById(int id) {
+		return getRemoteEJB().getById(id);
+	}
 	
 }

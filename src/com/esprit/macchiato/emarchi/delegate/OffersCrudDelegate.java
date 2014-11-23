@@ -32,6 +32,14 @@ public class OffersCrudDelegate {
 	public static void deleteOffer(int id) throws Exception {
 		getRemoteEJB().deleteOffer(id);
 	}
+	
+	public static List<Products> findOffersByCategory(String catego){
+		return getRemoteEJB().findOffersByCategory(catego);
+	}
+	
+	public static void moveOfferTo(int idOffer,String Catego){
+		getRemoteEJB().moveOfferTo(idOffer, Catego);
+	}
 
 	
 }
